@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      { "matcher": "", "hooks": [ { "type": "command", "command": "powershell.exe",
+        "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:/Users/<you>/.claude/hooks/budget.ps1", "prompt"], "timeout": 10 } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "", "hooks": [ { "type": "command", "command": "powershell.exe",
+        "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:/Users/<you>/.claude/hooks/budget.ps1", "tool"], "timeout": 10 } ] }
+    ]
+  }
+}
